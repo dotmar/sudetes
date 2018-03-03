@@ -1,0 +1,39 @@
+body {
+	background-color: $bg-color-primary;
+	@include font-size(16px);
+	font-family: $main-font;
+	font-weight: 300;
+	color: $text-color-primary;
+	line-height: 1.4;
+	.no-fontface & {
+		font-size: .95rem;
+	}
+}
+//============= font design
+h1, h2 {
+	font-family: $heading-font; // to do: image as font color! --> bookmark "tricks"
+	@include font-size(100px);
+	font-weight: 900;
+}
+h2 {
+	@include font-size(60px);
+}
+.blocks__title {
+	font-family: $heading-font;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.blocks__item {
+	font-family: $main-font;
+	font-weight: 400;
+}
+//============== font design -- end
+
+::-moz-selection {
+	background: $color-tertiary;
+	color: $text-color-primary-inverse;
+}
+::selection {
+	background: $color-tertiary;
+	color: $text-color-primary-inverse;
+}

@@ -1,0 +1,81 @@
+//=================================
+// image paths
+//=================================
+//Przedgorze Sudeckie
+$img-path-msl: "przedgorze_sudeckie/masyw_slezy/";
+
+//Sudety Srodkowe
+$img-path-suds: "sudety_srodkowe/";
+$img-path-gbar: "#{$img-path-suds}gory_bardzkie/";
+$img-path-gbys: "#{$img-path-suds}gory_bystrzyckie/";
+$img-path-gjas: "#{$img-path-suds}gory_jastrzebie/";
+$img-path-gkam: "#{$img-path-suds}gory_kamienne/";
+$img-path-gorl: "#{$img-path-suds}gory_orlickie/";
+$img-path-gsow: "#{$img-path-suds}gory_sowie/";
+$img-path-gsto: "#{$img-path-suds}gory_stolowe/";
+$img-path-gwal: "#{$img-path-suds}gory_walbrzyskie/";
+
+//Sudety Wschodnie
+$img-path-sudw: "sudety_wschodnie/";
+$img-path-ghan: "#{$img-path-sudw}gory_hanuszowickie/";
+$img-path-gopa: "#{$img-path-sudw}gory_opawskie/";
+$img-path-gzib: "#{$img-path-sudw}gory_zlote_i_bialskie/";
+$img-path-msnie: "#{$img-path-sudw}masyw_snieznika/";
+$img-path-nisjes: "#{$img-path-sudw}niski_jesionik/";
+$img-path-wysjes: "#{$img-path-sudw}wysoki_jesionik/";
+$img-path-wyzzab: "#{$img-path-sudw}wyzyna_zabrzeska/";
+
+//Sudety Zachodnie
+$img-path-sudz: "sudety_zachodnie/";
+$img-path-gizer: "#{$img-path-sudz}gory_izerskie/";
+$img-path-gkacz: "#{$img-path-sudz}gory_kaczawskie/";
+$img-path-gluz: "#{$img-path-sudz}gory_luzyckie/";
+$img-path-gjeszkoz: "#{$img-path-sudz}grzbiet_jesztiedzko-kozakowski/";
+$img-path-kark: "#{$img-path-sudz}karkonosze/";
+$img-path-rudjan: "#{$img-path-sudz}rudawy_janowickie/";
+
+//=================================
+// breakpoints
+//=================================
+/*$XS: 13em;
+$S: 30em; --> do podmiany
+$S: 36em;
+$M: 47em;
+$L: 71em;*/
+
+$XS: 210px;
+/*$S: 480px; --> do podmiany*/
+$S: 580px;
+$M: 752px;
+$L: 1136px;
+
+//=================================
+// color palette
+//=================================
+
+$bg-color-primary: #F2ECCE;
+$bg-color-secondary: #BF9F63;
+$bg-color-nav: rgba(tint($bg-color-primary, 60%), .7);
+$bg-color-heading: #402402;
+
+$line-color: #402402;
+
+$text-color-primary: #0D0D0D;
+$text-color-primary-inverse: #F2ECCE;
+$text-color-secondary: #402402;
+
+$color-tertiary: #734A19;
+
+//=================================
+// fonts
+//=================================
+
+/*$main-font: "WalleyeRegular", "Times New Roman", Times, Georgia, serif;*/
+$main-font: 'Open Sans', sans-serif;
+$heading-font: 'Playfair Display', serif;
+
+//=================================
+// blocks building
+//=================================
+$skew: -10deg;
+$inverse-skew: -$skew;

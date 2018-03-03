@@ -1,0 +1,77 @@
+@import "susy";
+
+$susy: (
+	columns: 8,
+	gutters: .25,
+	container: 1024px,
+	/*gutter-position: split,*/
+	global-box-sizing: border-box,
+ );
+
+/*$susy: (
+	columns: 4,
+	gutters: .15,
+	container: 1120px,
+	global-box-sizing: border-box,
+);*/
+
+*, *::before, *::after {
+	@include bs;
+} 
+
+.container {
+	@include container;
+	@extend %clearfix;
+}
+.title, .contact {
+	@include span(8);
+}
+.wrapper--title {
+	@include span(5);
+}
+.navbar {
+	@extend %clearfix;
+}
+/*.navbar__menu {
+	@extend %clearfix;
+}*/
+.navbar__item {
+	/*@include span(8);*/
+	@include MQ(Splus) {
+		@include span(2 of 8);
+	}
+	&:last-child {
+		@include MQ(Splus){
+			@include last;
+		}
+	}
+}
+.blocks {
+	@include span(8);
+	@include susy-breakpoint($M) {
+		@include span(4 of 8);
+		&:nth-child(2), &:last-child {
+			@include last;
+		}
+	}
+	@include susy-breakpoint($L) {
+		@include span(2 of 8);
+		&:nth-child(2) {
+			@include span(2);
+		}
+		&:last-child {
+			@include last;
+		}
+	}
+}
+.text-columns {
+	@include span(8);
+	@include susy-breakpoint($M) {
+		@include span(4);
+	}
+	@include susy-breakpoint($L) {
+		@include span(8);
+		columns: 2;
+		column-gap: 1.4em;
+	}
+}

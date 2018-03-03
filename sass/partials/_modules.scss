@@ -1,0 +1,316 @@
+a {
+	@extend %link-reset;
+}
+.responsive {
+	display: block;
+}
+.container {
+	padding: 0 1em;
+}
+header {
+	overflow: hidden;
+}
+.navbar {
+	position: fixed;
+	/*height: 3em;*/
+	width: 100%;
+	padding: .5em 0;
+	@include MQ(XS){
+		padding: .7em 0;
+	}
+	@include font-size(14px);
+	@include MQ(S){
+		@include font-size(13px);			
+	}
+	background-color: $bg-color-nav;
+	@include box-shadow($color-tertiary 0 1px 5px);
+	z-index: 100;
+	&__icon {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		display: block;
+		height: 1em;
+		width: 1.5em;
+		margin: auto;
+		@include skewed-box;
+		@include MQ(Splus){
+			display: none;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		&::before, &::after {
+			position: absolute;
+			display: block;
+			@include MQ(Splus) {
+				display: none;
+			}
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			color: tint($text-color-secondary, 20%);
+			font-family: $heading-font;
+			@include font-size(16px);
+			font-weight: 700;
+			line-height: 1;
+			@include skewed-box($inverse-skew);
+		}
+		&::before {
+			content: 'Korona';
+			right: 150%;
+			font-style: italic;
+		}
+		&::after {
+			content: 'Sudet\00f3w';
+			left: 150%;
+			text-transform: uppercase;
+		}
+	}
+	&__icon-bar {
+		position: absolute;
+		display: block;
+		height: 2px;
+		width: 100%;
+		background-color: tint($color-tertiary, 20%);
+		@include box-shadow($color-tertiary 1px 1px 1px);
+		&--2 {
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+		}
+		&--3 {
+			bottom: 0;
+		}
+	}
+	&__menu {
+		@extend %list-reset;
+		display: none;
+		@include MQ(Splus){
+			display: block;
+		}
+		margin: 0;
+		@include MQ(XS){
+			margin-top: 1em;
+			border-top: 1px solid rgba($line-color, .7);
+			border-image: linear-gradient(90deg, transparent, $line-color 20%, $line-color 80%, transparent) 1;
+		}
+	}
+	&__item {
+		position: relative;
+		padding-left: 2.5641%;
+		@include MQ(XS){
+			padding: .7em 0 0;
+		}
+		text-align: center;
+		&:first-child {
+			@include MQ(XS){
+				padding: .9em 0 0;
+			}
+		}
+		&:last-child {
+			padding-left: 0;
+		}
+		&::before, &::after {
+			@include MQ(XS){
+				display: none;
+			}
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			margin-right: .4em;
+			@include skewed-box;
+		}
+		&::before {
+			top: 0;
+			right: 0;
+			border-left: 1px solid $color-tertiary;
+		}
+		&::after {
+			right: 100%;
+			display: block;
+			border-bottom: 1px solid;
+			@include border-gradient(to right, $color-tertiary, transparent);
+			visibility: hidden;
+			@include single-transition(all, .3s, ease-out);
+			.no-borderimage &, .no-cssgradients & {
+				border-bottom: 1px solid $color-tertiary;
+			}
+		}
+		&:hover::after {
+			@include MQ(Splus){
+				right: 0;
+				visibility: visible;
+			}
+		}
+		a {
+			position: relative;
+			display: inline-block;
+			height: 2em;
+			padding: .2em;
+			color: $text-color-secondary;
+			line-height: 1.6;
+			text-transform: uppercase;
+			@include single-transition(all, .3s, ease-out);
+			&:hover {
+				font-weight: bolder;
+				@include MQ(XS){
+					font-weight: bold;
+				}
+				color: $color-tertiary;
+			}
+		}
+	}
+}
+.section-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&--header {
+		background-image: image-url("#{$img-path-rudjan}ostra_mala.jpg");
+		height: 100vh;
+		filter: sepia(100%);
+		.no-cssfilters & {
+			background-image: image-url("#{$img-path-rudjan}ostra_mala_s.jpg");
+		}
+		& .container {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			overflow: visible;
+		}
+	}
+}
+/*.section-image--header {
+	height: 100vh;
+	background-image: url(../img/hero_photo.jpg);
+	background-size: cover;
+	background-position: center;
+	@supports (filter: blur(2px)) and (mix-blend-mode: multiply) {
+		position: relative;
+		overflow: hidden;
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: block;
+			background-size: cover;
+		}
+		&::before {
+			background-image: url(../img/hero_photo.jpg), url(../img/hero_photo.jpg);
+			background-blend-mode: difference;
+			background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+			filter: brightness(18) invert(0.7) sepia(1);
+			box-shadow: inset 0 0 0 1px black;
+		}
+		&::after {
+			background-image: url(../img/hero_photo.jpg);
+			background-position: center;
+			mix-blend-mode: multiply;
+			filter: brightness(1.6) blur(2px) contrast(0.7) sepia(1);
+			z-index: -1; ---> daje ciekawy efekt starego szkicu! warto gdzieś wykorzystać!
+		}
+	}
+}*/
+.wrapper--title {
+	position: relative;
+	margin-left: .5em;
+	@include skewed-box($skew, left, top);
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		display: block;
+		height: 1px;
+		margin: auto 0;
+		border-top: 1px solid $line-color;
+	}
+	&::before {
+		@include MQ(Lplus){
+			right: 100%;
+			left: -50vw;
+		}
+	}
+	&::after {
+		@include MQ(Splus){
+			right: -50vw;
+			left: 100%;
+		}
+	}
+}
+.title--main {
+	position: relative;
+	display: flex;
+	@include MQ(XS){
+		display: none;
+	}
+	flex-wrap: wrap;
+	margin: 0;
+	padding-bottom: .4em;
+	@include font-size(100px);
+	@include MQ(S){
+		font-size: 3.35em;
+	}
+	@include MQ(M){
+		font-size: 3.85em;
+	}
+	color: $text-color-primary-inverse;
+	font-family: $heading-font;
+	font-weight: 900;
+	text-transform: uppercase;
+	span {
+		@include skewed-box($inverse-skew, left, top);
+		z-index: 1;
+		em {
+			color: tint($color-tertiary, 30%);
+			font-size: .85em;
+			text-transform: none;
+		}
+		&:first-child, &:last-child {
+			display: flex;
+		}
+		&:first-child {
+			align-items: center;
+			margin-left: -.085em;
+			margin-right: 0;
+			font-size: 2.2em;
+		}
+		&:last-child {
+			flex-direction: column;
+			justify-content: center;
+			padding-top: .13em;
+			font-size: .9em;
+			line-height: 1.2;
+		}
+	}
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: -50vw;
+		@include MQ(Lplus){
+			left: 0;
+		}
+	}
+	&::before {
+		top: .45em;
+		bottom: .65em;
+		background-color: rgba($bg-color-heading, .7);
+	}
+	&::after {
+		border-right: 1px solid rgba($line-color, .7);
+		border-left: 1px solid rgba($line-color, .7);
+		border-image: linear-gradient(transparent, $line-color 20%, $line-color 80%, transparent) 1;
+	}
+}
+.blocks__menu {
+	@extend %list-reset;
+}

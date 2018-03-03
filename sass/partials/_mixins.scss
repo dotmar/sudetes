@@ -1,0 +1,72 @@
+@mixin bs($bs-type: border-box) {
+	-webkit-box-sizing: $bs-type;
+	-moz-box-sizing: $bs-type;
+	box-sizing: $bs-type;
+}
+@mixin MQ($canvas) {
+	@if $canvas == XS {
+		@media only screen and (min-width: $XS) and (max-width: $S - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == S {
+		@media only screen and (min-width: $S) and (max-width: $M - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == M {
+		@media only screen and (min-width: $M) and (max-width: $L - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == XStoM {
+		@media only screen and (min-width: $XS) and (max-width: $M - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == StoL {
+		@media only screen and (min-width: $S) and (max-width: $L - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == Splus {
+		@media only screen and (min-width: $S) {
+			@content;
+		}
+	}
+	@else if $canvas == Mplus {
+		@media only screen and (min-width: $M) {
+			@content;
+		}
+	}
+	@else if $canvas == Lplus {
+		@media only screen and (min-width: $L) {
+			@content;
+		}
+	}
+}
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+@mixin border-gradient($direction, $color1, $color2){
+	-webkit-border-image: -webkit-linear-gradient($direction, $color1, $color2) 1;
+	-moz-border-image: -moz-linear-gradient($direction, $color1, $color2) 1;
+	-o-border-image: -o-linear-gradient($direction, $color1, $color2) 1;
+	border-image: linear-gradient($direction, $color1, $color2) 1;
+}
+
+@mixin menu-links($menu-item-bg-base: $bg-color-primary, $menu-item-bg-hover: darken($bg-color-primary, 5%)){
+	border-left: 1px solid $color-tertiary;
+	border-bottom: 1px solid $color-tertiary;
+	background-color: $menu-item-bg-base;
+	@include single-transition(all, .3s);
+	&:hover {
+		background-color: $menu-item-bg-hover;
+	}
+}
+
+@mixin skewed-box($deg: $skew, $dir1: left, $dir2: bottom){
+	@include skewX($deg);
+	@include transform-origin($dir1, $dir2);
+}
