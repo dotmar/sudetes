@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*$XS: 13em;
 $S: 30em; --> do podmiany
 $S: 36em;
@@ -715,24 +714,18 @@ a {
 }
 
 /* line 4, ../sass/partials/_modules.scss */
-.responsive {
-  display: block;
-}
-
-/* line 7, ../sass/partials/_modules.scss */
 .container {
   padding: 0 1em;
 }
 
-/* line 10, ../sass/partials/_modules.scss */
+/* line 7, ../sass/partials/_modules.scss */
 header {
   overflow: hidden;
 }
 
-/* line 13, ../sass/partials/_modules.scss */
+/* line 10, ../sass/partials/_modules.scss */
 .navbar {
   position: fixed;
-  /*height: 3em;*/
   width: 100%;
   padding: .5em 0;
   font-size: 14px;
@@ -744,19 +737,19 @@ header {
   z-index: 100;
 }
 @media only screen and (min-width: 210px) and (max-width: 579px) {
-  /* line 13, ../sass/partials/_modules.scss */
+  /* line 10, ../sass/partials/_modules.scss */
   .navbar {
     padding: .7em 0;
   }
 }
 @media only screen and (min-width: 580px) and (max-width: 751px) {
-  /* line 13, ../sass/partials/_modules.scss */
+  /* line 10, ../sass/partials/_modules.scss */
   .navbar {
     font-size: 13px;
     font-size: 0.8125rem;
   }
 }
-/* line 28, ../sass/partials/_modules.scss */
+/* line 24, ../sass/partials/_modules.scss */
 .navbar__icon {
   position: relative;
   top: 0;
@@ -777,16 +770,16 @@ header {
   transform-origin: left bottom;
 }
 @media only screen and (min-width: 580px) {
-  /* line 28, ../sass/partials/_modules.scss */
+  /* line 24, ../sass/partials/_modules.scss */
   .navbar__icon {
     display: none;
   }
 }
-/* line 42, ../sass/partials/_modules.scss */
+/* line 38, ../sass/partials/_modules.scss */
 .navbar__icon:hover {
   cursor: pointer;
 }
-/* line 45, ../sass/partials/_modules.scss */
+/* line 41, ../sass/partials/_modules.scss */
 .navbar__icon::before, .navbar__icon::after {
   position: absolute;
   display: block;
@@ -809,24 +802,24 @@ header {
   transform-origin: left bottom;
 }
 @media only screen and (min-width: 580px) {
-  /* line 45, ../sass/partials/_modules.scss */
+  /* line 41, ../sass/partials/_modules.scss */
   .navbar__icon::before, .navbar__icon::after {
     display: none;
   }
 }
-/* line 61, ../sass/partials/_modules.scss */
+/* line 57, ../sass/partials/_modules.scss */
 .navbar__icon::before {
   content: 'Korona';
   right: 150%;
   font-style: italic;
 }
-/* line 66, ../sass/partials/_modules.scss */
+/* line 62, ../sass/partials/_modules.scss */
 .navbar__icon::after {
   content: 'Sudet\00f3w';
   left: 150%;
   text-transform: uppercase;
 }
-/* line 72, ../sass/partials/_modules.scss */
+/* line 68, ../sass/partials/_modules.scss */
 .navbar__icon-bar {
   position: absolute;
   display: block;
@@ -837,58 +830,58 @@ header {
   -webkit-box-shadow: #734A19 1px 1px 1px;
   box-shadow: #734A19 1px 1px 1px;
 }
-/* line 79, ../sass/partials/_modules.scss */
+/* line 75, ../sass/partials/_modules.scss */
 .navbar__icon-bar--2 {
   top: 0;
   bottom: 0;
   margin: auto 0;
 }
-/* line 84, ../sass/partials/_modules.scss */
+/* line 80, ../sass/partials/_modules.scss */
 .navbar__icon-bar--3 {
   bottom: 0;
 }
-/* line 88, ../sass/partials/_modules.scss */
+/* line 84, ../sass/partials/_modules.scss */
 .navbar__menu {
   display: none;
   margin: 0;
 }
 @media only screen and (min-width: 580px) {
-  /* line 88, ../sass/partials/_modules.scss */
+  /* line 84, ../sass/partials/_modules.scss */
   .navbar__menu {
     display: block;
   }
 }
 @media only screen and (min-width: 210px) and (max-width: 579px) {
-  /* line 88, ../sass/partials/_modules.scss */
+  /* line 84, ../sass/partials/_modules.scss */
   .navbar__menu {
     margin-top: 1em;
     border-top: 1px solid rgba(64, 36, 2, 0.7);
     border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), #402402 20%, #402402 80%, rgba(0, 0, 0, 0)) 1;
   }
 }
-/* line 101, ../sass/partials/_modules.scss */
+/* line 97, ../sass/partials/_modules.scss */
 .navbar__item {
   position: relative;
   padding-left: 2.5641%;
   text-align: center;
 }
 @media only screen and (min-width: 210px) and (max-width: 579px) {
-  /* line 101, ../sass/partials/_modules.scss */
+  /* line 97, ../sass/partials/_modules.scss */
   .navbar__item {
     padding: .7em 0 0;
   }
 }
 @media only screen and (min-width: 210px) and (max-width: 579px) {
-  /* line 108, ../sass/partials/_modules.scss */
+  /* line 104, ../sass/partials/_modules.scss */
   .navbar__item:first-child {
     padding: .9em 0 0;
   }
 }
-/* line 113, ../sass/partials/_modules.scss */
+/* line 109, ../sass/partials/_modules.scss */
 .navbar__item:last-child {
   padding-left: 0;
 }
-/* line 116, ../sass/partials/_modules.scss */
+/* line 112, ../sass/partials/_modules.scss */
 .navbar__item::before, .navbar__item::after {
   content: '';
   position: absolute;
@@ -905,18 +898,18 @@ header {
   transform-origin: left bottom;
 }
 @media only screen and (min-width: 210px) and (max-width: 579px) {
-  /* line 116, ../sass/partials/_modules.scss */
+  /* line 112, ../sass/partials/_modules.scss */
   .navbar__item::before, .navbar__item::after {
     display: none;
   }
 }
-/* line 127, ../sass/partials/_modules.scss */
+/* line 123, ../sass/partials/_modules.scss */
 .navbar__item::before {
   top: 0;
   right: 0;
   border-left: 1px solid #734A19;
 }
-/* line 132, ../sass/partials/_modules.scss */
+/* line 128, ../sass/partials/_modules.scss */
 .navbar__item::after {
   right: 100%;
   display: block;
@@ -931,18 +924,18 @@ header {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-/* line 139, ../sass/partials/_modules.scss */
+/* line 135, ../sass/partials/_modules.scss */
 .no-borderimage .navbar__item::after, .no-cssgradients .navbar__item::after {
   border-bottom: 1px solid #734A19;
 }
 @media only screen and (min-width: 580px) {
-  /* line 143, ../sass/partials/_modules.scss */
+  /* line 139, ../sass/partials/_modules.scss */
   .navbar__item:hover::after {
     right: 0;
     visibility: visible;
   }
 }
-/* line 149, ../sass/partials/_modules.scss */
+/* line 145, ../sass/partials/_modules.scss */
 .navbar__item a {
   position: relative;
   display: inline-block;
@@ -956,35 +949,35 @@ header {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-/* line 158, ../sass/partials/_modules.scss */
+/* line 154, ../sass/partials/_modules.scss */
 .navbar__item a:hover {
   font-weight: bolder;
   color: #734A19;
 }
 @media only screen and (min-width: 210px) and (max-width: 579px) {
-  /* line 158, ../sass/partials/_modules.scss */
+  /* line 154, ../sass/partials/_modules.scss */
   .navbar__item a:hover {
     font-weight: bold;
   }
 }
 
-/* line 168, ../sass/partials/_modules.scss */
+/* line 164, ../sass/partials/_modules.scss */
 .section-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 172, ../sass/partials/_modules.scss */
+/* line 168, ../sass/partials/_modules.scss */
 .section-image--header {
   background-image: url('../img/sudety_zachodnie/rudawy_janowickie/ostra_mala.jpg?1493634186');
   height: 100vh;
   filter: sepia(100%);
 }
-/* line 176, ../sass/partials/_modules.scss */
+/* line 172, ../sass/partials/_modules.scss */
 .no-cssfilters .section-image--header {
   background-image: url('../img/sudety_zachodnie/rudawy_janowickie/ostra_mala_s.jpg?1513818810');
 }
-/* line 179, ../sass/partials/_modules.scss */
+/* line 175, ../sass/partials/_modules.scss */
 .section-image--header .container {
   display: flex;
   align-items: center;
@@ -992,41 +985,7 @@ header {
   overflow: visible;
 }
 
-/*.section-image--header {
-	height: 100vh;
-	background-image: url(../img/hero_photo.jpg);
-	background-size: cover;
-	background-position: center;
-	@supports (filter: blur(2px)) and (mix-blend-mode: multiply) {
-		position: relative;
-		overflow: hidden;
-		&::before, &::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			display: block;
-			background-size: cover;
-		}
-		&::before {
-			background-image: url(../img/hero_photo.jpg), url(../img/hero_photo.jpg);
-			background-blend-mode: difference;
-			background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
-			filter: brightness(18) invert(0.7) sepia(1);
-			box-shadow: inset 0 0 0 1px black;
-		}
-		&::after {
-			background-image: url(../img/hero_photo.jpg);
-			background-position: center;
-			mix-blend-mode: multiply;
-			filter: brightness(1.6) blur(2px) contrast(0.7) sepia(1);
-			z-index: -1; ---> daje ciekawy efekt starego szkicu! warto gdzie┼Ť wykorzysta─ç!
-		}
-	}
-}*/
-/* line 221, ../sass/partials/_modules.scss */
+/* line 183, ../sass/partials/_modules.scss */
 .wrapper--title {
   position: relative;
   margin-left: .5em;
@@ -1039,7 +998,7 @@ header {
   -webkit-transform-origin: left top;
   transform-origin: left top;
 }
-/* line 225, ../sass/partials/_modules.scss */
+/* line 187, ../sass/partials/_modules.scss */
 .wrapper--title::before, .wrapper--title::after {
   content: '';
   position: absolute;
@@ -1050,21 +1009,21 @@ header {
   border-top: 1px solid #402402;
 }
 @media only screen and (min-width: 1136px) {
-  /* line 234, ../sass/partials/_modules.scss */
+  /* line 196, ../sass/partials/_modules.scss */
   .wrapper--title::before {
     right: 100%;
     left: -50vw;
   }
 }
 @media only screen and (min-width: 580px) {
-  /* line 240, ../sass/partials/_modules.scss */
+  /* line 202, ../sass/partials/_modules.scss */
   .wrapper--title::after {
     right: -50vw;
     left: 100%;
   }
 }
 
-/* line 247, ../sass/partials/_modules.scss */
+/* line 209, ../sass/partials/_modules.scss */
 .title--main {
   position: relative;
   display: flex;
@@ -1079,24 +1038,24 @@ header {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 210px) and (max-width: 579px) {
-  /* line 247, ../sass/partials/_modules.scss */
+  /* line 209, ../sass/partials/_modules.scss */
   .title--main {
     display: none;
   }
 }
 @media only screen and (min-width: 580px) and (max-width: 751px) {
-  /* line 247, ../sass/partials/_modules.scss */
+  /* line 209, ../sass/partials/_modules.scss */
   .title--main {
     font-size: 3.35em;
   }
 }
 @media only screen and (min-width: 752px) and (max-width: 1135px) {
-  /* line 247, ../sass/partials/_modules.scss */
+  /* line 209, ../sass/partials/_modules.scss */
   .title--main {
     font-size: 3.85em;
   }
 }
-/* line 267, ../sass/partials/_modules.scss */
+/* line 229, ../sass/partials/_modules.scss */
 .title--main span {
   -moz-transform: skewX(10deg);
   -ms-transform: skewX(10deg);
@@ -1108,24 +1067,24 @@ header {
   transform-origin: left top;
   z-index: 1;
 }
-/* line 270, ../sass/partials/_modules.scss */
+/* line 232, ../sass/partials/_modules.scss */
 .title--main span em {
   color: #9d805e;
   font-size: .85em;
   text-transform: none;
 }
-/* line 275, ../sass/partials/_modules.scss */
+/* line 237, ../sass/partials/_modules.scss */
 .title--main span:first-child, .title--main span:last-child {
   display: flex;
 }
-/* line 278, ../sass/partials/_modules.scss */
+/* line 240, ../sass/partials/_modules.scss */
 .title--main span:first-child {
   align-items: center;
   margin-left: -.085em;
   margin-right: 0;
   font-size: 2.2em;
 }
-/* line 284, ../sass/partials/_modules.scss */
+/* line 246, ../sass/partials/_modules.scss */
 .title--main span:last-child {
   flex-direction: column;
   justify-content: center;
@@ -1133,7 +1092,7 @@ header {
   font-size: .9em;
   line-height: 1.2;
 }
-/* line 292, ../sass/partials/_modules.scss */
+/* line 254, ../sass/partials/_modules.scss */
 .title--main::before, .title--main::after {
   content: '';
   position: absolute;
@@ -1143,20 +1102,25 @@ header {
   left: -50vw;
 }
 @media only screen and (min-width: 1136px) {
-  /* line 292, ../sass/partials/_modules.scss */
+  /* line 254, ../sass/partials/_modules.scss */
   .title--main::before, .title--main::after {
     left: 0;
   }
 }
-/* line 303, ../sass/partials/_modules.scss */
+/* line 265, ../sass/partials/_modules.scss */
 .title--main::before {
   top: .45em;
   bottom: .65em;
   background-color: rgba(64, 36, 2, 0.7);
 }
-/* line 308, ../sass/partials/_modules.scss */
+/* line 270, ../sass/partials/_modules.scss */
 .title--main::after {
   border-right: 1px solid rgba(64, 36, 2, 0.7);
   border-left: 1px solid rgba(64, 36, 2, 0.7);
   border-image: linear-gradient(rgba(0, 0, 0, 0), #402402 20%, #402402 80%, rgba(0, 0, 0, 0)) 1;
+}
+
+/* line 279, ../sass/partials/_modules.scss */
+.responsive {
+  display: block;
 }

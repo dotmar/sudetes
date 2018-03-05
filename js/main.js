@@ -3,7 +3,7 @@ function dropdownMenu(){
 	document.getElementById('menu').classList.toggle('responsive');
 }
 window.onclick = function(event) {
-	event.target.matches = event.target.msMatchesSelector;
+	//event.target.matches = event.target.msMatchesSelector;
 	if (!event.target.matches('.navbar__icon')) {
 		var dropdowns = document.getElementsByClassName('navbar__menu');
 		var i;

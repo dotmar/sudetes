@@ -1,9 +1,6 @@
 a {
 	@extend %link-reset;
 }
-.responsive {
-	display: block;
-}
 .container {
 	padding: 0 1em;
 }
@@ -12,7 +9,6 @@ header {
 }
 .navbar {
 	position: fixed;
-	/*height: 3em;*/
 	width: 100%;
 	padding: .5em 0;
 	@include MQ(XS){
@@ -184,40 +180,6 @@ header {
 		}
 	}
 }
-/*.section-image--header {
-	height: 100vh;
-	background-image: url(../img/hero_photo.jpg);
-	background-size: cover;
-	background-position: center;
-	@supports (filter: blur(2px)) and (mix-blend-mode: multiply) {
-		position: relative;
-		overflow: hidden;
-		&::before, &::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			display: block;
-			background-size: cover;
-		}
-		&::before {
-			background-image: url(../img/hero_photo.jpg), url(../img/hero_photo.jpg);
-			background-blend-mode: difference;
-			background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
-			filter: brightness(18) invert(0.7) sepia(1);
-			box-shadow: inset 0 0 0 1px black;
-		}
-		&::after {
-			background-image: url(../img/hero_photo.jpg);
-			background-position: center;
-			mix-blend-mode: multiply;
-			filter: brightness(1.6) blur(2px) contrast(0.7) sepia(1);
-			z-index: -1; ---> daje ciekawy efekt starego szkicu! warto gdzieś wykorzystać!
-		}
-	}
-}*/
 .wrapper--title {
 	position: relative;
 	margin-left: .5em;
@@ -313,4 +275,7 @@ header {
 }
 .blocks__menu {
 	@extend %list-reset;
+}
+.responsive {
+	display: block;
 }
