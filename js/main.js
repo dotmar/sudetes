@@ -15,3 +15,17 @@ window.onclick = function(event) {
 		}
 	}
 }
+
+// Replace image if sepia filtr doesn't work.
+function imageToSepia(){
+	var filtrState = document.querySelector('html');
+	if (filtrState.classList.contains('no-cssfilters')){
+		var blocksImages = document.getElementsByClassName('blocks__img');
+		for (var i = 0; i < blocksImages.length; i++) {
+			var currentImage = blocksImages.item(i);
+			var newSource = currentImage.getAttribute('src').toLowerCase().replace('.jpg', '_s.jpg').replace('.jpeg', '_s.jpeg');
+			currentImage.setAttribute('src', newSource);
+		}
+	}
+}
+imageToSepia();

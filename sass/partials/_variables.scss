@@ -37,14 +37,7 @@ $img-path-rudjan: "#{$img-path-sudz}rudawy_janowickie/";
 //=================================
 // breakpoints
 //=================================
-/*$XS: 13em;
-$S: 30em; --> do podmiany
-$S: 36em;
-$M: 47em;
-$L: 71em;*/
-
 $XS: 210px;
-/*$S: 480px; --> do podmiany*/
 $S: 580px;
 $M: 752px;
 $L: 1136px;
@@ -57,6 +50,7 @@ $bg-color-primary: #F2ECCE;
 $bg-color-secondary: #BF9F63;
 $bg-color-nav: rgba(tint($bg-color-primary, 60%), .7);
 $bg-color-heading: #402402;
+$bg-color-blocks: rgba(darken($bg-color-heading, 7%), .7);
 
 $line-color: #402402;
 
@@ -69,8 +63,6 @@ $color-tertiary: #734A19;
 //=================================
 // fonts
 //=================================
-
-/*$main-font: "WalleyeRegular", "Times New Roman", Times, Georgia, serif;*/
 $main-font: 'Open Sans', sans-serif;
 $heading-font: 'Playfair Display', serif;
 

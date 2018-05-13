@@ -24,6 +24,11 @@
 			@content;
 		}
 	}
+	@else if $canvas == XStoL {
+		@media only screen and (min-width: $XS) and (max-width: $L - 1) {
+			@content;
+		}
+	}
 	@else if $canvas == StoL {
 		@media only screen and (min-width: $S) and (max-width: $L - 1) {
 			@content;

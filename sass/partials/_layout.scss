@@ -32,11 +32,7 @@ $susy: (
 .navbar {
 	@extend %clearfix;
 }
-/*.navbar__menu {
-	@extend %clearfix;
-}*/
 .navbar__item {
-	/*@include span(8);*/
 	@include MQ(Splus) {
 		@include span(2 of 8);
 	}
@@ -48,7 +44,7 @@ $susy: (
 }
 .blocks {
 	@include span(8);
-	@include susy-breakpoint($M) {
+	@include susy-breakpoint($S) {
 		@include span(4 of 8);
 		&:nth-child(2), &:last-child {
 			@include last;
