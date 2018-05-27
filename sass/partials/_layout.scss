@@ -42,7 +42,7 @@ $susy: (
 		}
 	}
 }
-.blocks {
+.block {
 	@include span(8);
 	@include susy-breakpoint($S) {
 		@include span(4 of 8);

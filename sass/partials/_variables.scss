@@ -50,7 +50,9 @@ $bg-color-primary: #F2ECCE;
 $bg-color-secondary: #BF9F63;
 $bg-color-nav: rgba(tint($bg-color-primary, 60%), .7);
 $bg-color-heading: #402402;
-$bg-color-blocks: rgba(darken($bg-color-heading, 7%), .7);
+/*$bg-color-blocks: rgba(darken($bg-color-heading, 7%), .7);*/
+$bg-color-blocks: #402402;
+
 
 $line-color: #402402;
 

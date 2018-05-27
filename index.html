@@ -14,132 +14,138 @@
 	<script src="js/modernizr-custom.js"></script>
 </head>
 <body>
-	<div class="wrapper wrapper--grid">
-		<header>
+	<div class="wrapper wrapper--grid"
+		><header>
 
 			<!-- The main navbar - visible on each website. -->
 			
-			<nav class="navbar navbar--main">
-				<span class="navbar__icon" onclick="dropdownMenu()">
-					<span class="navbar__icon-bar navbar__icon-bar--1"></span>
-					<span class="navbar__icon-bar navbar__icon-bar--2"></span>
-					<span class="navbar__icon-bar navbar__icon-bar--3"></span>
-				</span>
-				<div class="container">
-					<ul id="menu" class="navbar__menu navbar__menu--main">
-						<li class="navbar__item"><a href="">Szczyty</a></li>
-						<li class="navbar__item"><a href="">Idea strony</a></li>
-						<li class="navbar__item"><a href="">O autorce</a></li>
-						<li class="navbar__item"><a href="">Kontakt</a></li>
-					</ul>
-				</div>
-			</nav>
+			<nav class="navbar navbar--main"
+				><span class="navbar__icon" onclick="dropdownMenu()"
+					><span class="navbar__icon-bar navbar__icon-bar--1"></span
+					><span class="navbar__icon-bar navbar__icon-bar--2"></span
+					><span class="navbar__icon-bar navbar__icon-bar--3"></span
+				></span
+				><div class="container"
+					><ul id="menu" class="navbar__menu navbar__menu--main"
+						><li class="navbar__item"><a href="">Szczyty</a></li
+						><li class="navbar__item"><a href="">Idea strony</a></li
+						><li class="navbar__item"><a href="">O autorce</a></li
+						><li class="navbar__item"><a href="">Kontakt</a></li
+					></ul
+				></div
+			></nav>
 
 			<!-- The end of the main navbar. The title of the website. -->
 
-			<div class="section-image section-image--header">
-				<div class="container">
-					<div class="wrapper wrapper--title">				
-						<h1 class="title title--main">
-							<span>S</span><span>udetów <em>Korona</em></span>
-						</h1>
-					</div>
-				</div>
-			</div>
-		</header>	
+			<div class="section-image section-image--header"
+				><div class="container"
+					><div class="wrapper wrapper--title"
+						><h1 class="title title--main"
+							><span>S</span><span>udetów <em>Korona</em></span
+						></h1
+					></div
+				></div
+			></div
+		></header>	
 			
 				
 		<!-- The blocks with mountains - only on the main site.-->
 		
-		<main>
-			<section class="information information--peaks">
-				<div class="container">
-					<div class="blocks blocks--1">
-						<img class="blocks__img" src="img/sudety_zachodnie/karkonosze/Samotnia_i_Sniezka.jpg">
-						<h3 class="blocks__title"><span>Sudety Zachodnie</span></h3>
-						<ul class="blocks__menu">
-							<li class="blocks__item"><a href="">Góry Łużyckie</a></li>
-							<li class="blocks__item"><a href="">Grzbiet Jesztiedzko-Kozakowski</a></li>
-							<li class="blocks__item"><a href="">Góry Izerskie</a></li>
-							<li class="blocks__item"><a href="">Karkonosze</a></li>
-							<li class="blocks__item"><a href="">Rudawy Janowickie</a></li>
-							<li class="blocks__item"><a href="">Góry Kaczawskie</a></li>
-						</ul>
-					</div>
-					<div class="blocks blocks--2">
-						<img class="blocks__img" src="img/sudety_srodkowe/gory_kamienne/widok_z_Kostrzywy.jpg">
-						<h3 class="blocks__title"><span>Sudety Środkowe</span></h3>
-						<ul class="blocks__menu">
-							<li class="blocks__item"><a href="">Góry Wałbrzyskie</a></li>
-							<li class="blocks__item"><a href="">Góry Kamienne</a></li>
-							<li class="blocks__item"><a href="">Góry Jastrzębie</a></li>
-							<li class="blocks__item"><a href="">Góry Stołowe</a></li>
-							<li class="blocks__item"><a href="">Góry Sowie</a></li>
-							<li class="blocks__item"><a href="">Góry Bardzkie</a></li>
-							<li class="blocks__item"><a href="">Góry Orlickie</a></li>
-							<li class="blocks__item"><a href="">Góry Bystrzyckie</a></li>
-						</ul>
-					</div>
-					<div class="blocks blocks--3">
-						<img class="blocks__img" src="img/sudety_wschodnie/gory_zlote_i_bialskie/Bielice_wejscie_na_szlak_zielony.jpg">					
-						<h3 class="blocks__title"><span>Sudety Wschodnie</span></h3>
-						<ul class="blocks__menu">
-							<li class="blocks__item"><a href="">Góry Złote i Bialskie</a></li>
-							<li class="blocks__item"><a href="">Masyw Śnieżnika</a></li>
-							<li class="blocks__item"><a href="">Góry Opawskie</a></li>
-							<li class="blocks__item"><a href="">Wysoki Jesionik</a></li>
-							<li class="blocks__item"><a href="">Góry Hanuszowickie</a></li>
-							<li class="blocks__item"><a href="">Wyżyna Zabrzeska</a></li>
-							<li class="blocks__item"><a href="">Niski Jesionik</a></li>
-						</ul>
-					</div>
-					<div class="blocks blocks--4">
-						<img class="blocks__img" src="img/przedgorze_sudeckie/masyw_slezy/skalna_perc.jpg">					
-						<h3 class="blocks__title"><span>Przedgórze Sudeckie</span></h3>
-						<ul class="blocks__menu">
-							<li class="blocks__item"><a href="">Masyw Ślęży</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
+		<main
+			><section id="peaks" class="peak-blocks"
+				><div class="container"
+					><div id="block-one" class="block block--1"
+						><div class="wrapper wrapper--block"
+							><img id="block-one__img" class="block__img" src="img/sudety_zachodnie/karkonosze/Samotnia_i_Sniezka.jpg"
+							><h3 class="block__title"><span>Sudety Zachodnie</span></h3
+							><ul class="block__menu"
+								><li class="block__item"><a href="">Góry Łużyckie</a></li
+								><li class="block__item"><a href="">Grzbiet Jesztiedzko-Kozakowski</a></li
+								><li class="block__item"><a href="">Góry Izerskie</a></li
+								><li class="block__item"><a href="">Karkonosze</a></li
+								><li class="block__item"><a href="">Rudawy Janowickie</a></li
+								><li class="block__item"><a href="">Góry Kaczawskie</a></li
+							></ul
+						></div
+					></div
+					><div id="block-two" class="block block--2"
+						><div class="wrapper wrapper--block"
+							><img class="block__img" src="img/sudety_srodkowe/gory_kamienne/widok_z_Kostrzywy.jpg"
+							><h3 class="block__title"><span>Sudety Środkowe</span></h3
+							><ul class="block__menu"
+								><li class="block__item"><a href="">Góry Wałbrzyskie</a></li
+								><li class="block__item"><a href="">Góry Kamienne</a></li
+								><li class="block__item"><a href="">Góry Jastrzębie</a></li
+								><li class="block__item"><a href="">Góry Stołowe</a></li
+								><li class="block__item"><a href="">Góry Sowie</a></li
+								><li class="block__item"><a href="">Góry Bardzkie</a></li
+								><li class="block__item"><a href="">Góry Orlickie</a></li
+								><li class="block__item"><a href="">Góry Bystrzyckie</a></li
+							></ul
+						></div
+					></div
+					><div id="block-three" class="block block--3"
+						><div class="wrapper wrapper--block"
+							><img class="block__img" src="img/sudety_wschodnie/gory_zlote_i_bialskie/Bielice_wejscie_na_szlak_zielony.jpg"
+							><h3 class="block__title"><span>Sudety Wschodnie</span></h3
+							><ul class="block__menu"
+								><li class="block__item"><a href="">Góry Złote i Bialskie</a></li
+								><li class="block__item"><a href="">Masyw Śnieżnika</a></li
+								><li class="block__item"><a href="">Góry Opawskie</a></li
+								><li class="block__item"><a href="">Wysoki Jesionik</a></li
+								><li class="block__item"><a href="">Góry Hanuszowickie</a></li
+								><li class="block__item"><a href="">Wyżyna Zabrzeska</a></li
+								><li class="block__item"><a href="">Niski Jesionik</a></li
+							></ul
+						></div
+					></div
+					><div id="block-four" class="block block--4"
+						><div class="wrapper wrapper--block"
+							><img class="block__img" src="img/przedgorze_sudeckie/masyw_slezy/skalna_perc.jpg"
+							><h3 class="block__title"><span>Przedgórze Sudeckie</span></h3
+							><ul class="block__menu"
+								><li class="block__item"><a href="">Masyw Ślęży</a></li
+							></ul
+						></div
+					></div
+				></div
+			></section>
 			
 			<!-- The end of blocks with mountains-->
 
 
-			<section class="information information--about">
-				<div class="section-image">
-					<div class="container">
-						<h2 class="title title--section">Idea strony</h2>
-					</div>
-				</div>
-				<div class="container">
-					<p class="text-columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit adipisci pariatur, nihil laboriosam fugit, laborum. Quisquam iure blanditiis voluptatibus quibusdam deserunt nobis vero, quaerat, cupiditate animi, consequatur sed vel facilis nemo hic perspiciatis cumque! Temporibus nulla aperiam optio doloribus commodi velit, delectus beatae et, eligendi, aspernatur eveniet consectetur accusamus assumenda quae quia. Nostrum rem dolorum quisquam, quae eius provident corrupti esse reiciendis molestiae, debitis nesciunt tempore aut maxime nam animi, magni placeat labore perspiciatis dolor ab! Eius totam expedita perferendis fugit voluptate dolorum culpa odit dolor quam, doloremque, repudiandae obcaecati pariatur temporibus magni tenetur ea quo ullam reprehenderit dicta eaque.</p>
-				</div>
-			</section>
-
-			<section class="information information--author">
-				<div class="section-image">
-					<div class="container">
-						<h2 class="title title--secition">O autorce</h2>
-					</div>
-				</div>
-				<div class="container">
-					<p class="text-columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam culpa accusantium velit enim, provident vel numquam, repellat laudantium quos debitis fugiat reprehenderit. Dolorem, aut recusandae obcaecati impedit ipsam, excepturi quaerat delectus, amet maiores ad ea incidunt praesentium aliquam, non doloribus quia quae eum repellendus. Voluptate dolore possimus rem maiores odio autem inventore, nemo magni, doloremque omnis corporis quae eos sapiente maxime, dicta. Exercitationem fugiat, dignissimos nihil quae voluptas laudantium at impedit iste quos repellat vero pariatur ullam sapiente. Cum quo quos, alias voluptates sunt culpa, nihil fugiat, suscipit quod, dolorum ab voluptas quam quibusdam et eius aperiam nostrum quas!</p>
-				</div>
-			</section>
-		</main>
-
-		<footer class="information information--contact">
-			<div class="container">
-				<div class="contact">
-					<h3>Kontakt</h3>
-					<p>E-mail:</p>
-				</div>
-				<div class="social-media"></div>
-				<p class="copyright"></p>
-			</div>
-		</footer>
-	</div>
+			<section class="information information--about"
+				><div class="section-image"
+					><div class="container"
+						><h2 class="title title--section">Idea strony</h2
+					></div
+				></div
+				><div class="container"
+					><p class="text-columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit adipisci pariatur, nihil laboriosam fugit, laborum. Quisquam iure blanditiis voluptatibus quibusdam deserunt nobis vero, quaerat, cupiditate animi, consequatur sed vel facilis nemo hic perspiciatis cumque! Temporibus nulla aperiam optio doloribus commodi velit, delectus beatae et, eligendi, aspernatur eveniet consectetur accusamus assumenda quae quia. Nostrum rem dolorum quisquam, quae eius provident corrupti esse reiciendis molestiae, debitis nesciunt tempore aut maxime nam animi, magni placeat labore perspiciatis dolor ab! Eius totam expedita perferendis fugit voluptate dolorum culpa odit dolor quam, doloremque, repudiandae obcaecati pariatur temporibus magni tenetur ea quo ullam reprehenderit dicta eaque.</p
+				></div
+			></section
+			><section class="information information--author"
+				><div class="section-image"
+					><div class="container"
+						><h2 class="title title--secition">O autorce</h2
+					></div
+				></div
+				><div class="container"
+					><p class="text-columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam culpa accusantium velit enim, provident vel numquam, repellat laudantium quos debitis fugiat reprehenderit. Dolorem, aut recusandae obcaecati impedit ipsam, excepturi quaerat delectus, amet maiores ad ea incidunt praesentium aliquam, non doloribus quia quae eum repellendus. Voluptate dolore possimus rem maiores odio autem inventore, nemo magni, doloremque omnis corporis quae eos sapiente maxime, dicta. Exercitationem fugiat, dignissimos nihil quae voluptas laudantium at impedit iste quos repellat vero pariatur ullam sapiente. Cum quo quos, alias voluptates sunt culpa, nihil fugiat, suscipit quod, dolorum ab voluptas quam quibusdam et eius aperiam nostrum quas!</p
+				></div
+			></section
+		></main
+		><footer class="information information--contact"
+			><div class="container"
+				><div class="contact"
+					><h3>Kontakt</h3
+					><p>E-mail:</p
+				></div
+				><div class="social-media"></div
+				><p class="copyright"></p
+			></div
+		></footer
+	></div>
 	<script src="js/main.js"></script>
 </body>
 </html>

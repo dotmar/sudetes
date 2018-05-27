@@ -20,7 +20,7 @@ window.onclick = function(event) {
 function imageToSepia(){
 	var filtrState = document.querySelector('html');
 	if (filtrState.classList.contains('no-cssfilters')){
-		var blocksImages = document.getElementsByClassName('blocks__img');
+		var blocksImages = document.getElementsByClassName('block__img');
 		for (var i = 0; i < blocksImages.length; i++) {
 			var currentImage = blocksImages.item(i);
 			var newSource = currentImage.getAttribute('src').toLowerCase().replace('.jpg', '_s.jpg').replace('.jpeg', '_s.jpeg');
@@ -29,3 +29,53 @@ function imageToSepia(){
 	}
 }
 imageToSepia();
+
+function getTarget(e){
+	if (!e){
+		e = window.event;
+	}
+	return e.target || e.srcElement;
+}
+
+function addImgAsBg(e){
+	var target = getTarget(e);
+	var wrapper = target.firstChild;
+	var image = wrapper.firstChild;
+	var imgSource = image.getAttribute('src');
+	var newBgImg = document.createElement('img');
+	newBgImg.setAttribute('src', imgSource);
+	newBgImg.setAttribute('id', 'peak-section__img');
+	newBgImg.classList.add('peak-blocks__img', 'fade-in');
+	var position = document.getElementById('peaks');
+	position.appendChild(newBgImg);
+}
+function removeImgAsBg(e){
+	var removeBgImg = document.getElementById('peak-section__img');
+	var containerEl = removeBgImg.parentNode;
+	containerEl.removeChild(removeBgImg);
+}
+
+//It doesn't work in the old IE versions
+var elMountBlockOne = document.getElementById('block-one');
+elMountBlockOne.addEventListener('mouseenter', function(e){
+	addImgAsBg(e);
+}, false);
+elMountBlockOne.addEventListener('mouseleave', removeImgAsBg, false);
+
+var elMountBlockTwo = document.getElementById('block-two');
+elMountBlockTwo.addEventListener('mouseenter', function(e) {
+	addImgAsBg(e);
+}, false);
+elMountBlockTwo.addEventListener('mouseleave', removeImgAsBg, false);
+
+var elMountBlockThree = document.getElementById('block-three');
+elMountBlockThree.addEventListener('mouseenter', function(e) {
+	addImgAsBg(e);
+}, false);
+elMountBlockThree.addEventListener('mouseleave', removeImgAsBg, false);
+
+var elMountBlockFour = document.getElementById('block-four');
+elMountBlockFour.addEventListener('mouseenter', function(e) {
+	addImgAsBg(e);
+}, false);
+elMountBlockFour.addEventListener('mouseleave', removeImgAsBg, false);

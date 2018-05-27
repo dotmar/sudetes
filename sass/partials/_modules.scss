@@ -122,7 +122,6 @@ header {
 		}
 		&::before {
 			top: 0;
-			right: 0;
 			border-left: 1px solid $color-tertiary;
 		}
 		&::after {
@@ -130,7 +129,7 @@ header {
 			display: block;
 			border-bottom: 1px solid;
 			@include border-gradient(to right, $color-tertiary, transparent);
-			visibility: hidden;
+			/*visibility: hidden;*/
 			@include single-transition(all, .3s, ease-out);
 			.no-borderimage &, .no-cssgradients & {
 				border-bottom: 1px solid $color-tertiary;
@@ -139,7 +138,7 @@ header {
 		&:hover::after {
 			@include MQ(Splus){
 				right: 0;
-				visibility: visible;
+				/*visibility: visible;*/
 			}
 		}
 		a {
@@ -276,9 +275,10 @@ header {
 		border-image: linear-gradient(transparent, $line-color 20%, $line-color 80%, transparent) 1;
 	}
 }
-.information--peaks {
+.peak-blocks {
 	position: relative;
 	padding: 5rem 0;
+	overflow: hidden;
 	@include MQ(Lplus){
 		display: flex;
 		align-items: center;
@@ -289,7 +289,26 @@ header {
 		margin: 0;
 		padding: 0;
 	}
-	& .container {
+	&__img {
+		display: none;
+		@include MQ(Lplus){
+			position: absolute;
+			display: block;
+			height: auto;
+			width: auto;
+			max-width: 100%;
+			object-fit: cover;
+			.no-objectfit & {
+				top: -27%;
+				left: 0;
+			}
+			filter: sepia(100%);
+			opacity: .1;
+			z-index: -100;
+		}
+	}
+	.container {
+		position: relative;
 		overflow: visible;
 		@include MQ(Lplus){
 			width: 100%;
@@ -300,21 +319,29 @@ header {
 				transform: translateY(-50%);
 			}
 		}
+		&::before {
+			@include MQ(Lplus) {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				right: -50vw;
+				bottom: 0;
+				left: -50vw;
+				height: 1px;
+				margin: auto;
+				background-color: $line-color;
+			}
+		}
 	}
 }
-.blocks {
+.block {
 	position: relative;
-	height: 19rem;
 	margin-bottom: 1.5rem;
-	background-color: $bg-color-blocks;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	border: 1px solid $line-color;
-	overflow: hidden;
-	filter: sepia(100%);
 	@include MQ(Lplus){
 		margin-bottom: 0;
+		background-color: $bg-color-blocks;
 		@include skewed-box($skew, left, top);
 	}
 	&:last-child {
@@ -325,10 +352,57 @@ header {
 			margin-bottom: 0;
 		}
 	}
-	.no-cssfilters & {
-		background-color: transparent;
+	&::before {
+		@include MQ(Lplus){
+			content: '';
+			position: absolute;
+			top: 10%;
+			right: 0;
+			bottom: 10%;
+			left: 0;
+			width: 1px;
+			margin: auto;
+			background-color: rgba($line-color, .7);
+			background: linear-gradient(to top, transparent, $line-color 20%, $line-color 80%, transparent);
+			transition: all .5s ease-out;
+			z-index: -10;
+		}
 	}
-	.blocks__img {
+	&:hover::before {
+		@include MQ(Lplus){
+			top: -17%;
+			bottom: -17%;
+		}
+	}
+	.wrapper--block {
+		position: relative;
+		height: 19rem;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		filter: sepia(100%);
+		&::after {
+			@include MQ(XStoL){
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 50%;
+				bottom: 0;
+				left: -15%;
+				background-color: rgba($bg-color-heading, .3);
+				@include skewed-box($skew, center, center);
+				transition: all .5s ease-out;
+				z-index: -10;
+			}
+		}
+		&:hover::after {
+			@include MQ(XStoL){
+				right: 120%;
+			}
+		}
+	}
+	&__img {
 		position: absolute;
 		height: 100%;
 		z-index: -10;
@@ -364,51 +438,6 @@ header {
 			}
 		}
 	}
-	/*&--1 {
-		img {
-			.no-cssfilters & {
-				display: none;
-			}
-		}
-		&::before {
-			.no-cssfilters & {
-				content: image-url("#{$img-path-kark}Samotnia_i_Sniezka_s.jpg");
-				content: '';
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				background-image: image-url("#{$img-path-kark}Samotnia_i_Sniezka_s.jpg");
-				background-repeat: no-repeat;
-				background-size: cover;
-				z-index: -10;
-			}
-		}
-	}*/
-	/*&--1 {
-		background-image: image-url("#{$img-path-kark}Samotnia_i_Sniezka.jpg");
-		.no-cssfilters & {
-			background-image: image-url("#{$img-path-kark}Samotnia_i_Sniezka_s.jpg");
-		}
-	}
-	&--2 {
-		background-position: left;
-		background-image: image-url("#{$img-path-gkam}widok_z_Kostrzywy.jpg");
-		.no-cssfilters & {
-			background-image: image-url("#{$img-path-gkam}widok_z_Kostrzywy_s.jpg");
-		}
-	}
-	&--3 {
-		background-image: image-url("#{$img-path-gzib}Bielice_wejscie_na_szlak_zielony.jpg");
-		.no-cssfilters & {
-			background-image: image-url("#{$img-path-gzib}Bielice_wejscie_na_szlak_zielony_s.jpg");
-		}
-	}
-	&--4 {
-		background-image: image-url("#{$img-path-msl}skalna_perc.jpg");
-		.no-cssfilters & {
-			background-image: image-url("#{$img-path-msl}skalna_perc_s.jpg");
-		}
-	}*/
 	&__title {
 		position: absolute;
 		top: 50%;
@@ -422,9 +451,11 @@ header {
 		text-transform: uppercase;
 		background-color: rgba($bg-color-heading, .7);
 		transform: translateY(-50%);
-   	transition: all, .5s;
-   	transition-timing-function: ease-out;
+   	transition: all .5s ease-out;
    	z-index: 1;
+   	.no-cssfilters & {
+   		background-color: rgba(darken($bg-color-heading, 7%), .7);
+   	}
 		span {
 			@include MQ(Lplus){
 				display: block;
@@ -438,12 +469,16 @@ header {
 		color: $text-color-primary-inverse;
 		background-color: rgba($color-tertiary, .7);
 		visibility: hidden;
-		transition: all, .16s;
-   	transition-delay: .1s;
-   	transition-timing-function: ease-out;
+		transition: all .16s ease-out .1s;
+		// transition: all, .16s;
+  //  	transition-delay: .1s;
+  //  	transition-timing-function: ease-out;
+   	.no-cssfilters & {
+   		background-color: rgba(darken($bg-color-heading, 7%), .7);
+   	}
 	}
 	&__item {
-		padding: 3px 0;
+		padding: .2rem .5rem;
 		&:hover {
 			color: $text-color-primary;
 			background-color: $bg-color-primary;
@@ -456,14 +491,18 @@ header {
 		}
 	}
 	&:hover {
-		.blocks__title {
+		.block__title {
 			top: 0;
    		transform: translateY(0%);
 		}
-		.blocks__menu {
+		.block__menu {
 			visibility: visible;
 		}
 	}
+}
+.fade-in {
+	opacity: 0;
+	animation: fadeIn .5s ease-out 1 forwards;
 }
 .responsive {
 	display: block;
