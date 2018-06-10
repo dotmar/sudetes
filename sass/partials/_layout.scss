@@ -29,6 +29,12 @@ $susy: (
 .wrapper--title {
 	@include span(5);
 }
+.wrapper--section {
+	@include span(5);
+	@include MQ(XS){
+		@include span(6);
+	}
+}
 .navbar {
 	@extend %clearfix;
 }
