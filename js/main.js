@@ -79,3 +79,12 @@ elMountBlockFour.addEventListener('mouseenter', function(e) {
 	addImgAsBg(e);
 }, false);
 elMountBlockFour.addEventListener('mouseleave', removeImgAsBg, false);
+
+function firstLetter(){
+	var paragraphs = document.getElementsByClassName('initial-letter');
+	for (var i = 0; i < paragraphs.length; i++) {
+		var initial = paragraphs[i].textContent.charAt(0);
+		paragraphs[i].setAttribute('data-content', initial);
+	}
+}
+firstLetter();

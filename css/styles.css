@@ -1621,43 +1621,68 @@ header {
 }
 
 /* line 637, ../sass/partials/_modules.scss */
-.text-columns {
+.initial-letter {
   position: relative;
+}
+/* line 639, ../sass/partials/_modules.scss */
+.initial-letter::before {
+  content: attr(data-content);
+  font-family: "Playfair Display", serif;
+  color: rgba(29, 17, 1, 0.15);
+}
+@media only screen and (min-width: 210px) and (max-width: 579px) {
+  /* line 639, ../sass/partials/_modules.scss */
+  .initial-letter::before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 580px) and (max-width: 1135px) {
+  /* line 639, ../sass/partials/_modules.scss */
+  .initial-letter::before {
+    margin: -.35em .13em -.25em 0;
+    float: left;
+    font-size: 5em;
+  }
 }
 @media only screen and (min-width: 1136px) {
   /* line 639, ../sass/partials/_modules.scss */
-  .text-columns::before {
-    content: 'L';
+  .initial-letter::before {
     position: absolute;
     top: 0;
     left: 0;
-    font-family: "Playfair Display", serif;
     font-size: 8.5em;
-    color: rgba(29, 17, 1, 0.15);
     line-height: 1;
     transform: translate(-50%, -50%);
   }
 }
-@media only screen and (min-width: 210px) and (max-width: 1135px) {
-  /* line 652, ../sass/partials/_modules.scss */
-  .text-columns::first-letter {
-    float: left;
-    margin-top: -.1em;
-    margin-right: .1em;
-    font-family: "Playfair Display", serif;
-    font-size: 5em;
-    color: rgba(29, 17, 1, 0.15);
-    line-height: .9;
+/* line 660, ../sass/partials/_modules.scss */
+.initial-letter::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3em;
+  width: 1em;
+  border-right: 3px solid rgba(29, 17, 1, 0.15);
+  border-left: 3px solid rgba(29, 17, 1, 0.15);
+  transform: skew(-10deg) translateY(50%);
+  transform-origin: right top;
+}
+@media only screen and (min-width: 580px) and (max-width: 1135px) {
+  /* line 672, ../sass/partials/_modules.scss */
+  .initial-letter::first-letter {
+    font-size: 0;
+    columns: transparent;
   }
 }
 
-/* line 664, ../sass/partials/_modules.scss */
+/* line 679, ../sass/partials/_modules.scss */
 .fade-in {
   opacity: 0;
   animation: fadeIn .5s ease-out 1 forwards;
 }
 
-/* line 668, ../sass/partials/_modules.scss */
+/* line 683, ../sass/partials/_modules.scss */
 .responsive {
   display: block;
 }
