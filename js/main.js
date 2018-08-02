@@ -20,7 +20,7 @@ window.onclick = function(event) {
 function imageToSepia(){
 	var filtrState = document.querySelector('html');
 	if (filtrState.classList.contains('no-cssfilters')){
-		var blocksImages = document.getElementsByClassName('block__img');
+		var blocksImages = document.getElementsByTagName('img');
 		for (var i = 0; i < blocksImages.length; i++) {
 			var currentImage = blocksImages.item(i);
 			var newSource = currentImage.getAttribute('src').toLowerCase().replace('.jpg', '_s.jpg').replace('.jpeg', '_s.jpeg');

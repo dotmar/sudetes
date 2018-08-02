@@ -69,11 +69,23 @@ $susy: (
 .text-columns {
 	@include span(8);
 	@include susy-breakpoint($M) {
-		@include span(4);
+		@include span(4 of 8);
 	}
 	@include susy-breakpoint($L) {
 		@include span(8);
 		columns: 2;
 		column-gap: 1.4em;
+	}
+}
+.article-image {
+	@include span(6);
+	@include squish(1, 1);
+	@include susy-breakpoint($M) {
+		@include span(4 of 8);
+		@include squish(0, 0);
+	}
+	@include susy-breakpoint($L) {
+		@include span(6);
+		@include squish(1, 1);
 	}
 }
